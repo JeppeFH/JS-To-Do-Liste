@@ -17,7 +17,12 @@ function renderToDoList() {
   toDoContainer.innerHTML = "";
 
   todoArray.forEach((item) => {
-    toDoContainer.innerHTML += `<p class="list-item" >${item}</p>`;
+    toDoContainer.innerHTML += `
+    <section class="list-item-flex">
+    <p class="list-item" >${item} </p>
+    <div class="checkbox"><i class="fa-solid fa-check"></i></div>
+    </section>
+    `;
   });
 }
 /*  */
@@ -25,10 +30,13 @@ renderToDoList();
 
 /* Tjek af på listen */
 const listItem = document.querySelectorAll(".list-item");
+const checkIcon = document.querySelectorAll(".fa-check");
+const checkbox = document.querySelectorAll(".checkbox");
 
-listItem.forEach((item) => {
+listItem.forEach((item, index) => {
   item.addEventListener("click", (event) => {
     event.target.classList.toggle("done");
+    checkIcon[index].classList.toggle("active");
   });
 });
 
