@@ -15,3 +15,6 @@ body {
 }
 
 /* To Do Liste */
+.done {
+  color: red;
+}

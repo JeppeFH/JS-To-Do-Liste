@@ -11,6 +11,15 @@ let todoArray = [
   "Støvsuge",
 ];
 
+/* Udskrive array med forEach funktion */
 todoArray.forEach((item) => {
-  toDoContainer.innerHTML += `<p>${item}</p>`;
+  toDoContainer.innerHTML += `<p class="list-item" >${item}</p>`;
+});
+
+const listItem = document.querySelectorAll(".list-item");
+
+listItem.forEach((item) => {
+  item.addEventListener("click", (event) => {
+    event.target.classList.toggle("done");
+  });
 });
