@@ -18,3 +18,18 @@ body {
 .done {
   color: red;
 }
+
+.checkbox {
+  display: flex;
+  padding: 5px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 2px solid red;
+  background-color: lightgrey;
+}
+
+.fa-check {
+  color: red;
+  font-size: 1.6rem;
+}
