@@ -62,6 +62,9 @@ function attachEventListeners() {
     btnDelete.forEach((btn) => {
       btn.classList.toggle("active");
     });
+    listItem.forEach((item) => {
+      item.classList.toggle("active");
+    });
   });
 
   /* Slette items fra list ved at klikke på btnDelete  */

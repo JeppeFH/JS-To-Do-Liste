@@ -76,7 +76,7 @@ h1 {
   background-color: rgb(230, 230, 230);
   align-self: center;
   position: absolute;
-  left: 395px;
+  left: 394px;
 }
 
 .checkbox.active {
@@ -98,8 +98,7 @@ h1 {
 }
 
 .btn-add-item,
-.btn-edit,
-.btn-delete {
+.btn-edit {
   display: inline-block;
   padding: 4px;
   border: 2px solid black;
@@ -109,7 +108,9 @@ h1 {
 }
 
 .btn-add-item:hover,
-.btn-delete-item:hover {
+.btn-delete-item:hover,
+.btn-edit:hover,
+.btn-delete.active:hover {
   background-color: rgb(206, 206, 206);
 }
 
@@ -118,11 +119,26 @@ h1 {
 }
 
 .btn-delete.active {
-  display: block;
+  display: inline-block;
+  padding: 12px;
+  border: 2px solid black;
+  font-size: 1.6rem;
+  background-color: rgb(230, 230, 230);
+  cursor: pointer;
+  position: absolute;
+  left: 394px;
+}
+
+.btn-delete.active:hover {
+  background-color: rgb(206, 206, 206);
 }
 
 .fa-xmark {
   color: red;
+  font-size: 1.8rem;
+  position: absolute;
+  top: 4px;
+  left: 6px;
 }
 
 @keyframes icon-spin {
@@ -131,5 +147,45 @@ h1 {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+.list-item.active {
+  animation: vibrate 1600ms linear infinite;
+}
+
+@keyframes vibrate {
+  0% {
+    transform: translateX(0);
+  }
+  10% {
+    transform: translateX(-1px) rotate(-1deg);
+  }
+  20% {
+    transform: translateX(1px) rotate(1deg);
+  }
+  30% {
+    transform: translateX(-1px) rotate(-1deg);
+  }
+  40% {
+    transform: translateX(1px) rotate(1deg);
+  }
+  50% {
+    transform: translateX(-1px) rotate(-1deg);
+  }
+  60% {
+    transform: translateX(1px) rotate(1deg);
+  }
+  70% {
+    transform: translateX(-1px) rotate(-1deg);
+  }
+  80% {
+    transform: translateX(1px) rotate(1deg);
+  }
+  90% {
+    transform: translateX(-1px) rotate(-1deg);
+  }
+  100% {
+    transform: translateX(0) rotate(0deg);
   }
 }
